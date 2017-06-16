@@ -23,8 +23,3 @@ gulp.task('save', ['zip'], function (cb) {
     spawn.sync('git', ['push', 'origin', 'master:master'], {stdio: 'inherit'});
     cb();
 });
-
-gulp.task('release', function () {
-    return gulp.src(['./src/model/*.png', './src/model/*.dae'])
-        .pipe(gulp.dest('./release/model/'));
-});
